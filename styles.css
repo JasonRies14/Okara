@@ -107,6 +107,8 @@ header {
     width: 100%;
     background-color: rgba(167, 167, 167, 0.7);
     z-index: 1000;
+    height: 7.35rem;
+    transition: top 0.25s ease-in-out, height 0.25s ease-in-out;
 }
 
 #lolw.scrolled {
@@ -199,12 +201,13 @@ header {
 @media screen and (max-width: 768px) {
     #nav-links {
         display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 7.3rem;
-        left: 0;
-        width: 100%;
-        justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 7.3rem;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    transition: top 0.25s ease-in-out, height 0.25s ease-in-out;
     }
 
     #nav-links.scrolled {
