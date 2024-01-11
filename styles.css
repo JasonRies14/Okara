@@ -1,27 +1,167 @@
 * {
-    font-size: 10px;
     margin: 0;
-	padding: 0;
-	border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+main {
+    font-size: 1rem;
+}
+
+footer {
+    background-color: black;
+    font-size: 1rem;
+    color: aliceblue;
+}
+
+body {
+    background-color: rgb(164, 167, 168);
 }
 
 header {
-    background-image: url(Images/okara.co.za-1704825349411/OKARA-renewable-energy-and-construction-1-scaled.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-    max-width: 100vw;
-    filter: contrast(90%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 9999999999;
 }
 
-@media screen and (max-width: 780px) {
-    header {
-        background-image: url(Images/okara.co.za-1704825349411/LeftCenter.png);
-        background-position: center;
-    }
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    transition: 0.6s;
+}
 
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    margin-right: 2rem;
+    transform: translateY(0px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border-bottom: solid 1px rgb(128, 128, 128, 25%);
+    margin: 1rem;
+}
+
+
+
+#DivForHeaderAndNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(167, 167, 167, 0.7);
+    z-index: 1000;
+    height: 7.35rem;
+    transition: top 0.25s ease-in-out, height 0.25s ease-in-out;
+}
+
+#DivForHeaderAndNav.scrolled {
+    top: 0;
+    position: sticky;
+    width: 100%;
+    height: 4rem;
+    justify-content: space-evenly;
+    backdrop-filter: blur(10px);
+    will-change: transform;
+}
+
+#logoimg {
+    width: 20rem;
+    height: auto;
+    margin: 1rem;
+}
+
+#logoimg.scrolled {
+    width: 13rem;
+    margin: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    transform: translateY(0px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links ul li {
+    margin-right: 2rem;
+    width: 85%;
+    opacity: 0;
+    transform: translateY(0px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border-bottom: solid 1px rgb(128, 128, 128, 25%);
+    margin: 1rem;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+}
+
+#rotateToggle {
+    display: none;
+}
+
+#Nav-Menu-Toggle {
+    width: 3rem;
+    transition: transform 0.3s ease;
+}
+
+
+.div-for-unordered-list {
+    display: block;
+    width: 95%;
+    margin: 0 auto; 
+    text-align: center; 
+    background-color: rgba(167, 167, 167, 0.7);
+    border-top: solid 5px rgba(69,182,83,100%);
 }
 
 /* Nav bar Toggle */
@@ -98,116 +238,18 @@ header {
     box-shadow: 0px 0px 1px rgba(0,255,0,1);
 }
 
-#lolw {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    top: 0;
-    width: 100%;
-    background-color: rgba(167, 167, 167, 0.7);
-    z-index: 1000;
-    height: 7.35rem;
-    transition: top 0.25s ease-in-out, height 0.25s ease-in-out;
-}
-
-#lolw.scrolled {
-    top: 0;
-    position: sticky;
-    width: 100%;
-    height: 4rem;
-    justify-content: space-evenly;
-    backdrop-filter: blur(10px);
-    will-change: transform;
-}
-
-#logoimg {
-    width: 20rem;
-    height: auto;
-    margin: 1rem;
-}
-
-#logoimg.scrolled {
-    width: 13rem;
-    margin: 1rem;
-}
-
-@media screen and (max-width: 780px) {
-    header {
-        background-image: url(Images/okara.co.za-1704825349411/LeftCenter.png);
-        background-position: center;
-    }
-
-}
-
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    opacity: 0;
-    transform: translateY(0px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.nav-links ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.nav-links li {
-    margin: 0 1rem;
-}
-
-.nav-links ul li {
-    margin-right: 2rem;
-    width: 85%;
-    opacity: 0;
-    transform: translateY(0px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    border-bottom: solid 1px rgb(128, 128, 128, 25%);
-    margin: 1rem;
-}
-
-.nav-links ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 2rem;
-}
-
-.menu-toggle {
-    cursor: pointer;
-    display: none;
-}
-
-.xd {
-    display: block;
-    width: 95%;
-    margin: 0 auto; 
-    text-align: center; 
-    background-color: rgba(167, 167, 167, 0.7);
-    border-top: solid 5px rgba(69,182,83,100%);
-}
+/* For screens with max width of 768px */
 
 @media screen and (max-width: 768px) {
     #nav-links {
         display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 7.3rem;
-    left: 0;
-    width: 100%;
-    justify-content: center;
-    transition: top 0.25s ease-in-out, height 0.25s ease-in-out;
+        flex-direction: column;
+        position: absolute;
+        top: 7.3rem;
+        left: 0;
+        width: 100%;
+        justify-content: center;
+        transition: top 0.25s ease-in-out;
     }
 
     #nav-links.scrolled {
@@ -239,21 +281,14 @@ header {
     }
 }
 
-#rotateToggle {
-    display: none;
-}
-
-#Nav-Menu-Toggle {
-    width: 3rem;
-    transition: transform 0.3s ease;
-}
+/* For screens with min width of 769px */
 
 @media screen and (min-width: 769px) {
     .rotatetogglediv {
         display: none;
     }
 
-    .lolw {
+    #DivForHeaderAndNav {
         overflow: hidden;
         display: flex;
         justify-content: space-evenly;
@@ -272,7 +307,7 @@ header {
         opacity: 1;
     }
 
-    .xd {
+    .div-for-unordered-list {
     display: flex;
     border-top: 0;
     }
@@ -385,7 +420,42 @@ header {
         flex-direction: row;
     }
 
-    .xd {
+    .div-for-unordered-list {
         background-color: transparent;
     }
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: url(Images/okara.co.za-1704825349411/OKARA-renewable-energy-and-construction-1-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner p {
+    padding: 4rem;
+}
+
+.banner p, span {
+    color: white;
+    font-size: 5rem;
+    font-weight: 500;
+    font-family: 'Dosis', sans-serif;
+}
+
+.span-for-dynamic {
+    color: rgb(57,180,73);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.span-for-pause {
+    color: rgb(57,180,73);
 }
