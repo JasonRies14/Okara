@@ -159,6 +159,7 @@ header ul li {
     text-align: center; 
     background-color: rgba(167, 167, 167, 0.7);
     border-top: solid 5px rgba(69,182,83,100%);
+
 }
 
 .ul-div {
@@ -523,13 +524,18 @@ header ul li {
 .card-img img {
     max-width: 35rem;
     border-radius: 1rem;
-    transition: all 0.5s ease-in-out;
-    box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);
+    padding: 1rem;
 }
 
-.card-img img:hover {
+.div-for-img {
+    border-radius: 1rem;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
+}
+
+.div-for-img:hover {
     scale: 105%;
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
     -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
@@ -542,6 +548,12 @@ header ul li {
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bolder;
+    padding-bottom: 2rem;
+}
+
+.div-for-p {
+    display: flex;
+    justify-content: center;
 }
 
 .p-for-span .span-for-service-teams, .span-for-tower-access, .span-for-fluid-exchange {
@@ -577,66 +589,76 @@ header ul li {
     
     .card-4 {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    .card-img img {
-        max-width: 20rem;
-    }
-}
-
-@media screen and (max-width: 979px) {
-    .card-3 {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    
-    .card-4 {
-        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4rem;
     }
 
     .card-img img {
         max-width: 20rem;
     }
 
-    .card-img {
-        margin-top: 10rem;
+    .div-for-img p {
+        width: 200px;
+        font-size: 1.7rem;
+    }
+
+    .p-for-span .span-for-service-teams, .span-for-tower-access, .span-for-fluid-exchange {
+        font-size: 1.7rem;
     }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 1000px) {
+    .card-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+
+    }
+    
+    .card-4 {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .card-img img {
+
+    }
+    
+}
+
+
+@media screen and (max-width: 698px) {
     .card-3 {
         grid-template-columns: 1fr;
-        margin-top: 10rem;
+        gap: 5rem;
     }
     
     .card-4 {
         grid-template-columns: 1fr;
-        margin-top: 10rem;
     }
 
     .card-img img {
-        max-width: 50rem;
+        max-width: 45rem;
     }
 
-    .card-img {
-        margin-top: 10rem;
+    .div-for-img p {
+        width: 200px;
+        font-size: 2rem;
     }
-}
 
-@media screen and (max-width: 580px) {
-    .card-3 {
-        grid-template-columns: 1fr;
+    .p-for-span .span-for-service-teams, .span-for-tower-access, .span-for-fluid-exchange {
+        font-size: 2rem;
     }
     
-    .card-4 {
-        grid-template-columns: 1fr;
-        
-    }
+}
 
+@media screen and (max-width: 535px) {
+     .card-img img {
+        max-width: 35rem;
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
     .card-img img {
-        max-width: 40rem;
-    }
-
-    .card-img {
-        margin-top: 10rem;
+        max-width: 30rem;
     }
 }
