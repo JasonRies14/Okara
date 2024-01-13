@@ -657,8 +657,15 @@ header ul li {
     
 }
 
+@media screen and (max-width: 380px) {
+    .card-img img {
+       max-width: 30rem;
+   }
+   
+}
+
 @media screen and (max-width: 320px) {
     .card-img img {
-        max-width: 30rem;
+        max-width: 25rem;
     }
 }
